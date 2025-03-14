@@ -64,3 +64,44 @@ hero_pagination_dots.forEach((dot, index) => {
 
 showSlide(currentSlide);
 autoSlide();
+
+
+// core statements filter functionality
+const core_statement_btn_con = document.querySelector(".core_statement_filter_btns");
+const core_statement_btns = document.querySelectorAll(".core_statement_filter_btns span");
+
+function filterStatement(statementBtn) {
+    const btn_category = statementBtn.getAttribute("data-category").trim();
+    const core_statements_wrapper = document.querySelector(".core_statements_wrapper");
+    const core_statements = core_statements_wrapper.querySelectorAll(".core_statements");
+
+    core_statements.forEach(core_statement => {
+        if (core_statement.classList.contains(btn_category)) {
+            core_statement.style.display = "block";
+            core_statement.style.opacity = "1";
+        } else {
+            core_statement.style.display = "none";
+            core_statement.style.opacity = "0";
+        }
+    })
+
+    core_statement_btn_con.querySelectorAll("span").forEach(btn => btn.classList.remove("active_statement_btn"));
+    statementBtn.classList.add("active_statement_btn");
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    let defaultBtn = document.querySelector(".core_statement_filter_btns span.active_statement_btn");
+    
+    if (!defaultBtn) {
+        defaultBtn = core_statement_btns[0];
+        defaultBtn.classList.add("active_statement_btn");
+    }
+
+    filterStatement(defaultBtn);
+})
+
+core_statement_btns.forEach(statementBtn => {
+    statementBtn.addEventListener("click", () => {
+        filterStatement(statementBtn);
+    })
+})
