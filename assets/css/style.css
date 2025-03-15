@@ -986,7 +986,6 @@ header .show_menu:hover span{
 
 .consultation_wrapper .consultation_col:last-child form{
     width: 85%;
-    background-color: red;
 }
 
 .consultation_wrapper .consultation_col:last-child .sub_heading,
@@ -1062,7 +1061,6 @@ header .show_menu:hover span{
     padding: 5px 10px 5px 0;
     height: 100%;
     display: flex;
-    /* background-color: red; */
     justify-content: space-between;
     align-items: center;
     outline: none;
@@ -1147,9 +1145,8 @@ header .show_menu:hover span{
 }
 
 .consultation_wrapper .consultation_col:last-child .time_picker .time_dropdown::-webkit-scrollbar {
-    width: 5px;
-    background-color: var(--secondary-text-color);
-    height: 20px;
+    width: 0;
+    height: 0;
     margin: 0;
 }
 
@@ -1165,6 +1162,11 @@ header .show_menu:hover span{
     color: var(--quaternary-color);
 }
 
+.selected_time {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+}
+
 .consultation_wrapper .consultation_col:last-child textarea{
     width: 100%;
     display: block;
@@ -1177,6 +1179,13 @@ header .show_menu:hover span{
     margin-bottom: 20px;
     font-family: "Poppins", sans-serif;
     color: var(--tertiary-bg-color);
+    -ms-overflow-style: none;
+}
+
+.consultation_wrapper .consultation_col:last-child textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    margin: 0;
 }
 
 .consultation_wrapper .consultation_col:last-child button{
@@ -1194,4 +1203,60 @@ header .show_menu:hover span{
     font-weight: 600;
 }
 
+@media (max-width: 900px) {
+    .consultation_wrapper{
+        justify-content: center;
+        background-color: var(--secondary-color);
+        background: linear-gradient( rgb(247, 159, 36, 0.6), rgb(247, 159, 36, 0.6)), url("../imgs/consultation/img-1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .consultation_wrapper .consultation_col{
+        width: 80%;
+    }
+    
+    .consultation_wrapper .consultation_col:first-child{
+        display: none;
+    }
+    
+    .consultation_wrapper .consultation_col:last-child form{
+        width: 100%;
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .consultation_wrapper{
+        padding: 0 20px;
+    }
+
+    .consultation_wrapper .consultation_col{
+        width: 100%;
+    }
+
+    .consultation_wrapper .consultation_col:last-child .consultation_inputs{
+        flex-wrap: wrap;
+    }
+    
+    .consultation_wrapper .consultation_col:last-child .consultation_inputs input{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+     
+    .consultation_wrapper .consultation_col:last-child .date_time_container{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .consultation_wrapper .consultation_col:last-child .date_time_picker{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .consultation_wrapper .consultation_col:last-child .date_time_picker:last-child,
+    .consultation_wrapper .consultation_col:last-child .consultation_inputs input:last-child{
+        margin-bottom: 0px;
+    }
+}
 /* end */

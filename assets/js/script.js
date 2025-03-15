@@ -224,6 +224,7 @@ document.addEventListener("click", function (event) {
 // time picker
 const timeInput = date_time_container.querySelector(".timeInput");
 const timeDropdown = date_time_container.querySelector(".time_dropdown");
+let selectedTime = null;
 
 function generateTimeOptions() {
     const times = [];
@@ -244,10 +245,22 @@ function generateTimeOptions() {
         let timeOption = document.createElement("div");
         timeOption.classList.add("time_option");
         timeOption.textContent = time;
+
+        if (selectedTime === time) {
+            timeOption.classList.add("selected_time");
+        }
+
         timeOption.onclick = function () {
+            selectedTime = time;
             timeInput.value = time;
+
+            document.querySelectorAll(".selected_time").forEach(el => el.classList.remove("selected_time"));
+
+            timeOption.classList.add("selected_time");
+
             closeTimeDropdown();
         };
+
         timeDropdown.appendChild(timeOption);
     });
 }
