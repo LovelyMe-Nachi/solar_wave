@@ -1,5 +1,5 @@
 <?php
-    require_once "includes/header.php";
+    include_once "includes/header.php";
 ?>
 
         <!-- hero -->
@@ -472,5 +472,5 @@
 
 <!-- footer -->
 <?php
-    require_once "includes/footer.php";
+    include_once "includes/footer.php";
 ?>
