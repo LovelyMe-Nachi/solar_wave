@@ -281,7 +281,7 @@ function closeTimeDropdown() {
 }
 
 timeInput.addEventListener("click", function () {
-    timeDropdown.innerHTML = ""; // Clear previous options
+    timeDropdown.innerHTML = "";
     generateTimeOptions();
     openTimeDropdown();
 });
@@ -297,7 +297,6 @@ document.addEventListener("click", function (event) {
 new Swiper('.testimonies_wrapper', {
     loop: true,
     spaceBetween: 30,
-    // If we need pagination
     pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -316,3 +315,42 @@ new Swiper('.testimonies_wrapper', {
         }
     }
 });
+
+// gallery lightbox
+const galleryImgs = document.querySelectorAll(".project_img");
+const enlargeImgBtns = document.querySelectorAll(".enlarge_img");
+const projectLightbox = document.querySelector(".project_lightbox");
+const lightboxImg = projectLightbox.querySelector(".lightbox_img");
+const prevLightboxImg = projectLightbox.querySelector(".prev_lightbox_img");
+const nextLightboxImg = projectLightbox.querySelector(".next_lightbox_img");
+const closeLightbox = projectLightbox.querySelector(".close_lightbox");
+let currentIndex = 0;
+
+
+function openLightbox(index){
+    currentIndex = index;
+    lightboxImg.src = galleryImgs[index].src;
+    projectLightbox.style.display = "flex";
+}
+
+enlargeImgBtns.forEach((btn, index) => {
+    btn.addEventListener("click", () => openLightbox(index));
+})
+
+closeLightbox.addEventListener("click", ()=>{
+    projectLightbox.style.display = "none";
+})
+
+prevLightboxImg.addEventListener("click", ()=>{
+    currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
+    lightboxImg.src = galleryImgs[currentIndex].src;
+})
+
+nextLightboxImg.addEventListener("click", ()=>{
+    currentIndex = (currentIndex + 1) % galleryImgs.length;
+    lightboxImg.src = galleryImgs[currentIndex].src;
+})
+
+
+// footer year
+const footer_date = document.querySelector(".footer_date").innerHTML = currentDate.getFullYear();
