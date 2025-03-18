@@ -7,6 +7,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- js -->
     <script src="assets/js/script.js" defer></script>
@@ -62,11 +63,12 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="">home</a></li>
-                    <li><a href="">about</a></li>
-                    <li><a href="">services</a></li>
-                    <li><a href="">products</a></li>
-                    <li><a href="">contact</a></li>
+                    <li><a href="index.php">home</a></li>
+                    <li><a href="about.php">about</a></li>
+                    <li><a href="services.php">services</a></li>
+                    <li><a href="team.php">team</a></li>
+                    <li><a href="projects.php">projects</a></li>
+                    <li><a href="contact.php">contact</a></li>
                     <li><a href="">sign up</a></li>
                 </ul>
             </nav>
@@ -87,8 +89,8 @@
             </div>
 
             <ul>
-                <li><a href="">home <span><i class="fa-solid fa-angle-right"></i></span></a></li>
-                <li><a href="">about <span><i class="fa-solid fa-angle-right"></i></span></a></li>
+                <li><a href="index.php">home <span><i class="fa-solid fa-angle-right"></i></span></a></li>
+                <li><a href="about.php">about <span><i class="fa-solid fa-angle-right"></i></span></a></li>
                 <li><a href="">services <span><i class="fa-solid fa-angle-right"></i></span></a></li>
                 <li><a href="">products <span><i class="fa-solid fa-angle-right"></i></span></a></li>
                 <li><a href="">contact <span><i class="fa-solid fa-angle-right"></i></span></a></li>
