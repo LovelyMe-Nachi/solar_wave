@@ -186,7 +186,6 @@ header nav ul li a:hover::before{
 header .search_box{
     width: 25%;
     height: 70%;
-    background-color: var(--secondary-text-color);
     background-color: var(--secondary-bg-color) !important;
     padding: 5px 15px;
     border-radius: 4px;

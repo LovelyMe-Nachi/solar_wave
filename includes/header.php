@@ -91,9 +91,10 @@
             <ul>
                 <li><a href="index.php">home <span><i class="fa-solid fa-angle-right"></i></span></a></li>
                 <li><a href="about.php">about <span><i class="fa-solid fa-angle-right"></i></span></a></li>
-                <li><a href="">services <span><i class="fa-solid fa-angle-right"></i></span></a></li>
-                <li><a href="">products <span><i class="fa-solid fa-angle-right"></i></span></a></li>
-                <li><a href="">contact <span><i class="fa-solid fa-angle-right"></i></span></a></li>
+                <li><a href="services.php">services <span><i class="fa-solid fa-angle-right"></i></span></a></li>
+                <li><a href="projects.php">projects <span><i class="fa-solid fa-angle-right"></i></span></a></li>
+                <li><a href="contact.php">contact <span><i class="fa-solid fa-angle-right"></i></span></a></li>
+                <li><a href="team.php">team <span><i class="fa-solid fa-angle-right"></i></span></a></li>
                 <li><a href="">sign up <span><i class="fa-solid fa-angle-right"></i></span></a></li>
             </ul>
 
